@@ -1,0 +1,32 @@
+{
+  "page": "My Portofolio",
+  "fam": "Raturandang",
+  "name": "Daniel Jeremiah",
+  "title": "College Student",
+  "gender": "Male",
+  "address": "Langowan",
+  "email": "s22310557@student.unklab.ac.id",
+  "phone": "+62 857-962-008-56",
+  "skills": ["Fast Learner", "Networking", "Adapt"],
+  "experience": [
+    "Mengikuti Lomba Proxo",
+    "Membuat Project SAD Sendiri",
+    "Pernah Bekerja di Store Beauty Buffy Langowan",
+    "Memanage Product Store Beauty Buffy Langowan"
+  ],
+  "education": [
+    { "school": "University of the Klabat", "year": "2023 - Now" },
+    { "school": "SMA Negeri 1 Langowan", "year": "2020 - 2023" }
+  ],
+  "interests": [
+    { "img": "../src/assets/Coding.jpeg", "title": "Coding" },
+    { "img": "../src/assets/Fast and Forious.jpeg", "title": "Cars" },
+    { "img": "../src/assets/Cable.jpeg", "title": "Networking" }
+  ],
+  "photos": ["satu.jpg", "dua.jpg", "tiga.jpg"],
+  "social": [
+    { "name": "GitHub", "url": "https://github.com/Pixell2005" },
+    { "name": "Instagram", "url": "https://www.instagram.com/danielraturandang/" },
+    { "name": "Spotify", "url": "https://open.spotify.com/user/31oypips25sndzc4k2gwmwkfibcq" }
+  ]
+}
