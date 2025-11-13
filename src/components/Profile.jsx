@@ -1,5 +1,3 @@
-import profilePic from "../assets/Profile.jpg";
-
 export default function Profile({ fam, name, title, gender, address, email, social, phone }) {
   return (
     <section className="relative flex flex-col md:flex-row items-start bg-white mt-8 mx-auto w-[90%] max-w-5xl rounded-2xl p-8 shadow-lg">
@@ -12,9 +10,9 @@ export default function Profile({ fam, name, title, gender, address, email, soci
       <div className="flex flex-col items-center md:items-start md:w-1/3">
         <div className="relative">
           <img
-            src={profilePic}
+            src="/Profile.jpg"
             alt="Profile"
-            className="w-76 h-76 rounded-full object-cover shadow-lg"
+            className="w-72 h-72 rounded-full object-cover shadow-lg"
           />
           <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-indigo-500 rounded-full"></div>
         </div>
@@ -24,7 +22,7 @@ export default function Profile({ fam, name, title, gender, address, email, soci
           <li><strong>Gender:</strong> {gender}</li>
           <li><strong>Address:</strong> {address}</li>
           <li><strong>Email:</strong> {email}</li>
-          <li><strong>Phone Number:</strong> {phone}</li>
+          <li><strong>Phone:</strong> {phone}</li>
         </ul>
       </div>
 

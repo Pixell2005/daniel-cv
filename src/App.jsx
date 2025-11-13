@@ -8,32 +8,24 @@ import Photography from "./components/Photography";
 import Footer from "./components/Footer";
 
 function App() {
-  const [data, setData] = useState(null); // state untuk simpan data JSON
-  const [loading, setLoading] = useState(true); // optional: buat loading state
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/daniel_cv.json")
-      .then((response) => {
-        if (!response.ok) throw new Error("Failed to load JSON");
-        return response.json();
-      })
-      .then((jsonData) => {
-        setData(jsonData);
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Error fetching JSON:", error);
+      .catch((err) => {
+        console.error("Error loading JSON:", err);
         setLoading(false);
       });
   }, []);
 
-  if (loading) {
-    return <div className="text-center mt-10">Loading...</div>;
-  }
-
-  if (!data) {
-    return <div className="text-center mt-10 text-red-500">Failed to load data.</div>;
-  }
+  if (loading) return <div className="text-center mt-10">Loading...</div>;
+  if (!data) return <div className="text-center mt-10 text-red-500">Failed to load data.</div>;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
@@ -52,7 +44,7 @@ function App() {
       <Education education={data.education} />
       <Interests interests={data.interests} />
       <Photography photos={data.photos} />
-      <Footer email={data.email} social={data.social} phone={data.phone} />
+      <Footer email={data.email} social={data.social} />
     </div>
   );
 }
